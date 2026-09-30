@@ -14,7 +14,8 @@ export const Route = createFileRoute("/support")({
       { property: "og:title", content: "Support — ProofPilot" },
       {
         property: "og:description",
-        content: "Account, sign-in, purchase and document help for ProofPilot, plus how to reach us.",
+        content:
+          "Account, sign-in, purchase and document help for ProofPilot, plus how to reach us.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -50,7 +51,7 @@ const faqs = [
   },
   {
     q: "How do I delete my account?",
-    a: "Self-service account deletion is not yet available. Email us from the address on your account with the subject \"Account deletion request\" and we will confirm your identity and handle the request. Deletion is permanent.",
+    a: 'Self-service account deletion is not yet available. Email us from the address on your account with the subject "Account deletion request" and we will confirm your identity and handle the request. Deletion is permanent.',
   },
   {
     q: "Does ProofPilot send reminders or submit claims for me?",
@@ -86,9 +87,7 @@ function Support() {
           <li>what you were trying to do and what happened instead</li>
           <li>the purchase involved, and a screenshot if it helps</li>
         </ul>
-        <p>
-          Never send us your password, verification codes or payment card details.
-        </p>
+        <p>Never send us your password, verification codes or payment card details.</p>
       </DocSection>
 
       <DocSection title="Common questions">
@@ -107,13 +106,19 @@ function Support() {
       <DocSection title="More information">
         <ul>
           <li>
-            <Link to="/privacy" className="font-bold text-accent-foreground underline underline-offset-4">
+            <Link
+              to="/privacy"
+              className="font-bold text-accent-foreground underline underline-offset-4"
+            >
               Privacy Policy
             </Link>{" "}
             — what we collect and how it is handled.
           </li>
           <li>
-            <Link to="/terms" className="font-bold text-accent-foreground underline underline-offset-4">
+            <Link
+              to="/terms"
+              className="font-bold text-accent-foreground underline underline-offset-4"
+            >
               Terms of Service
             </Link>{" "}
             — the rules for using ProofPilot.

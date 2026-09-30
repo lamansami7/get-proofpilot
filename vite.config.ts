@@ -12,4 +12,15 @@ export default defineConfig({
     // nitro/vite builds from this
     server: { entry: "server" },
   },
+  vite: {
+    server: {
+      // Allow the Arena sandbox preview host (https://{port}-{sandboxId}.e2b.app) to load the
+      // local dev server. Dev/preview only — the production nitro/Cloudflare build is unaffected.
+      // Vite matches exact hostnames or ".domain" suffixes, so ".e2b.app" covers every sandbox.
+      allowedHosts: [".e2b.app"],
+    },
+    preview: {
+      allowedHosts: [".e2b.app"],
+    },
+  },
 });
