@@ -34,46 +34,46 @@ const problems = [
 const steps = [
   {
     step: "01",
-    title: "Add a purchase",
-    body: "Record the merchant, product, price, purchase date, serial and model numbers — everything you need later.",
+    title: "Capture the receipt",
+    body: "Photograph or upload a receipt. AI-assisted extraction can suggest the merchant, product, date and price — always for you to review and correct.",
   },
   {
     step: "02",
-    title: "Store your documents",
-    body: "Keep receipts, invoices, warranty documents and manuals attached to the purchase they belong to.",
+    title: "Confirm the details",
+    body: "Check the purchase record and add what matters later: serial and model numbers, SKU and notes.",
   },
   {
     step: "03",
     title: "Track deadlines",
-    body: "Return windows and warranty end dates are tracked with reminders at 30 days, 7 days and 1 day.",
+    body: "Record return windows and warranty end dates so you can see what is coming up and what has passed.",
   },
   {
     step: "04",
-    title: "Get help when it goes wrong",
-    body: "Use your stored details to prepare a claim, and ask the assistant questions about your own purchases.",
+    title: "Prepare a claim",
+    body: "Use the details and documents you stored to prepare a return or warranty claim you send yourself.",
   },
 ];
 
 const features = [
   {
-    title: "Purchase tracking",
+    title: "Receipt capture",
+    body: "Add a purchase from a receipt photo or file. AI-assisted extraction proposes the key fields; results are not guaranteed, so you confirm every value before it is saved.",
+    points: ["Suggested fields", "You review everything", "Manual entry always available"],
+  },
+  {
+    title: "Purchase records",
     body: "Merchant, product name, category, purchase date, price and currency, serial number, model number, SKU and notes — one organized record per purchase.",
-    points: ["Receipts and invoices", "Product details", "Service records"],
+    points: ["Product details", "Serial & model numbers", "Notes"],
   },
   {
     title: "Return & warranty deadlines",
-    body: "Return windows and warranties are kept as dated deadlines with active, completed and dismissed states, so nothing quietly expires.",
-    points: ["Return deadlines", "Warranty end dates", "30 / 7 / 1 day reminders"],
+    body: "Return windows and warranties are kept as dated deadlines with active, completed and dismissed states, so you can see what needs attention.",
+    points: ["Return deadlines", "Warranty end dates", "Deadline status"],
   },
   {
-    title: "Document Vault",
-    body: "Receipts, invoices, warranty documents and manuals stay attached to the right purchase, with file type and size shown clearly.",
-    points: ["Receipts & invoices", "Warranty documents", "Manuals and other files"],
-  },
-  {
-    title: "Claims",
-    body: "Pull the purchase details, dates and documents you already stored into a claim you can prepare and send yourself.",
-    points: ["Linked to a purchase", "Related documents", "Prepared from your records"],
+    title: "Claims help",
+    body: "Pull the purchase details, dates and documents you already stored into a claim you prepare and submit to the merchant yourself. ProofPilot does not submit claims for you.",
+    points: ["Linked to a purchase", "Related documents", "You stay in control"],
   },
 ];
 
@@ -97,9 +97,9 @@ function Landing() {
               ProofPilot protects your purchases after checkout.
             </h1>
             <p className="mt-5 max-w-xl text-base leading-relaxed text-hero-foreground/80 sm:text-lg">
-              Keep purchase records organized, track return and warranty deadlines, store the
-              documents that prove what you bought, manage claims, get reminders, and ask an
-              assistant about your own purchases.
+              Capture receipts, keep purchase records organized, track return and warranty
+              deadlines, and get AI help preparing claims — using the details you have
+              confirmed about your own purchases.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link to="/auth" className="btn-base btn-primary">
@@ -118,33 +118,13 @@ function Landing() {
           <div className="relative">
             <div className="rounded-3xl border border-white/15 bg-white/10 p-3 shadow-floating backdrop-blur-sm">
               <div className="rounded-2xl bg-card p-5 text-foreground">
-                <div className="flex items-center justify-between">
-                  <div>
-                    <p className="eyebrow">Dashboard</p>
-                    <p className="mt-1 text-lg font-extrabold tracking-[-0.03em]">Your purchases</p>
-                  </div>
-                  <span className="rounded-full bg-accent px-3 py-1 text-xs font-bold text-accent-foreground">
-                    12 protected
-                  </span>
+                <div>
+                  <p className="eyebrow">Example</p>
+                  <p className="mt-1 text-lg font-extrabold tracking-[-0.03em]">
+                    Purchase records
+                  </p>
                 </div>
 
-                <div className="mt-5 grid grid-cols-3 gap-3">
-                  {[
-                    { label: "Purchases", value: "12" },
-                    { label: "Returns open", value: "3" },
-                    { label: "Warranties", value: "8" },
-                  ].map((stat) => (
-                    <div
-                      key={stat.label}
-                      className="rounded-xl border border-border-subtle bg-secondary p-3"
-                    >
-                      <p className="text-xl font-extrabold tracking-[-0.03em]">{stat.value}</p>
-                      <p className="mt-0.5 text-[0.6875rem] font-semibold text-muted-foreground">
-                        {stat.label}
-                      </p>
-                    </div>
-                  ))}
-                </div>
 
                 <div className="mt-5 space-y-2.5">
                   {[
@@ -192,7 +172,7 @@ function Landing() {
               </div>
             </div>
             <p className="mt-3 text-center text-xs text-hero-foreground/60">
-              Illustration of the ProofPilot dashboard.
+              Illustration with example data — not real users or purchases.
             </p>
           </div>
         </div>
@@ -314,20 +294,19 @@ function Landing() {
             <p className="eyebrow">Privacy &amp; security</p>
             <h2 className="mt-3 text-3xl md:text-4xl">Your records stay yours.</h2>
             <p className="mt-4 max-w-xl text-base leading-relaxed text-ink-secondary">
-              ProofPilot is built on Supabase authentication with row-level security, so the
-              database itself enforces that a record can only be read by the account that owns it —
-              or by household members you explicitly share with.
+              ProofPilot uses account-based authentication with row-level security, so the
+              database itself enforces that a record can only be read by the account that owns it.
             </p>
             <p className="mt-4 text-sm text-muted-foreground">
-              We describe only what the product actually does. No certification claims, no
-              marketing language about encryption we have not implemented.
+              We describe only what the product actually does. No certification claims and no
+              security guarantees.
             </p>
           </div>
           <dl className="grid gap-4 sm:grid-cols-2">
             {[
               {
-                t: "Supabase authentication",
-                d: "One account across web and mobile, with email verification and password reset.",
+                t: "One account",
+                d: "The same account is intended to work across web and the mobile app.",
               },
               {
                 t: "Row Level Security",
@@ -335,19 +314,19 @@ function Landing() {
               },
               {
                 t: "Account ownership",
-                d: "Purchases, documents, deadlines and claims are scoped to your user account.",
+                d: "Purchases, deadlines and claims are scoped to your user account.",
               },
               {
-                t: "Server-side functions",
-                d: "Privileged work, including AI requests and account deletion, runs on the server.",
+                t: "Server-side AI",
+                d: "AI requests run through a server-side function; your device never holds AI provider keys.",
               },
               {
-                t: "Private document storage",
-                d: "Files are stored in a private bucket; nothing is made publicly readable.",
+                t: "No selling of data",
+                d: "Your purchase information is not sold to anyone.",
               },
               {
                 t: "Account deletion",
-                d: "You can delete your account and its data from Settings.",
+                d: "Deletion requests are currently handled through support while the in-app process is verified.",
               },
             ].map((item) => (
               <div key={item.t} className="rounded-2xl border border-border bg-background p-5">
