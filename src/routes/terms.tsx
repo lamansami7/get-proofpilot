@@ -14,7 +14,8 @@ export const Route = createFileRoute("/terms")({
       { property: "og:title", content: "Terms of Service — ProofPilot" },
       {
         property: "og:description",
-        content: "Your account, your content, acceptable use and the limits of ProofPilot's service.",
+        content:
+          "Your account, your content, acceptable use and the limits of ProofPilot's service.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -62,9 +63,9 @@ function Terms() {
         <p>
           ProofPilot is an organizing tool. It does not provide legal, financial or consumer-rights
           advice, it is not a party to your purchase, and it cannot make a merchant, manufacturer or
-          insurer accept a return or a claim, and it does not submit claims for you. Deadline tracking is a convenience: the merchant or
-          manufacturer&apos;s own terms decide your actual rights, and you remain responsible for
-          acting in time.
+          insurer accept a return or a claim, and it does not submit claims for you. Deadline
+          tracking is a convenience: the merchant or manufacturer&apos;s own terms decide your
+          actual rights, and you remain responsible for acting in time.
         </p>
       </DocSection>
 

@@ -14,7 +14,8 @@ export const Route = createFileRoute("/privacy")({
       { property: "og:title", content: "Privacy Policy — ProofPilot" },
       {
         property: "og:description",
-        content: "What ProofPilot collects, how it is stored and how to delete your account and data.",
+        content:
+          "What ProofPilot collects, how it is stored and how to delete your account and data.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -32,7 +33,9 @@ function Privacy() {
       updated="This document has not been reviewed by a lawyer. It is a plain description of the product's data handling."
     >
       <DocSection title="Information we collect">
-        <p>ProofPilot stores only what you enter or upload, plus what is needed to run an account:</p>
+        <p>
+          ProofPilot stores only what you enter or upload, plus what is needed to run an account:
+        </p>
         <ul>
           <li>
             <strong>Account information</strong> — your email address and authentication details,
@@ -83,9 +86,9 @@ function Privacy() {
 
       <DocSection title="Storage and security">
         <p>
-          Every purchase, deadline and claim is tied to the account that created it. Access rules are
-          enforced in the database itself through row-level security, so records can only be read by
-          their owner.
+          Every purchase, deadline and claim is tied to the account that created it. Access rules
+          are enforced in the database itself through row-level security, so records can only be
+          read by their owner.
         </p>
         <p>
           No system is perfectly secure. We do not claim any certification, audit or compliance

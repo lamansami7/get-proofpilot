@@ -98,8 +98,8 @@ function Landing() {
             </h1>
             <p className="mt-5 max-w-xl text-base leading-relaxed text-hero-foreground/80 sm:text-lg">
               Capture receipts, keep purchase records organized, track return and warranty
-              deadlines, and get AI help preparing claims — using the details you have
-              confirmed about your own purchases.
+              deadlines, and get AI help preparing claims — using the details you have confirmed
+              about your own purchases.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link to="/auth" className="btn-base btn-primary">
@@ -120,11 +120,8 @@ function Landing() {
               <div className="rounded-2xl bg-card p-5 text-foreground">
                 <div>
                   <p className="eyebrow">Example</p>
-                  <p className="mt-1 text-lg font-extrabold tracking-[-0.03em]">
-                    Purchase records
-                  </p>
+                  <p className="mt-1 text-lg font-extrabold tracking-[-0.03em]">Purchase records</p>
                 </div>
-
 
                 <div className="mt-5 space-y-2.5">
                   {[
@@ -294,8 +291,8 @@ function Landing() {
             <p className="eyebrow">Privacy &amp; security</p>
             <h2 className="mt-3 text-3xl md:text-4xl">Your records stay yours.</h2>
             <p className="mt-4 max-w-xl text-base leading-relaxed text-ink-secondary">
-              ProofPilot uses account-based authentication with row-level security, so the
-              database itself enforces that a record can only be read by the account that owns it.
+              ProofPilot uses account-based authentication with row-level security, so the database
+              itself enforces that a record can only be read by the account that owns it.
             </p>
             <p className="mt-4 text-sm text-muted-foreground">
               We describe only what the product actually does. No certification claims and no
