@@ -62,7 +62,7 @@ function Terms() {
         <p>
           ProofPilot is an organizing tool. It does not provide legal, financial or consumer-rights
           advice, it is not a party to your purchase, and it cannot make a merchant, manufacturer or
-          insurer accept a return or a claim. Deadline reminders are a convenience: the merchant or
+          insurer accept a return or a claim, and it does not submit claims for you. Deadline tracking is a convenience: the merchant or
           manufacturer&apos;s own terms decide your actual rights, and you remain responsible for
           acting in time.
         </p>
@@ -86,8 +86,16 @@ function Terms() {
 
       <DocSection title="Ending your use">
         <p>
-          You can stop using ProofPilot at any time and delete your account from Settings. Deletion
-          is permanent. We may end access to accounts that breach these terms.
+          You can stop using ProofPilot at any time. To delete your account, contact support;
+          self-service deletion is not yet available. Deletion is permanent. We may end access to
+          accounts that breach these terms.
+        </p>
+      </DocSection>
+
+      <DocSection title="Operator and governing law">
+        <p>
+          [Legal input required: legal name and address of the operator, governing law, and dispute
+          resolution.] These terms require legal review before launch.
         </p>
       </DocSection>
 

@@ -43,23 +43,20 @@ function Privacy() {
             price and currency, serial number, model number, SKU and your notes.
           </li>
           <li>
-            <strong>Documents</strong> — receipts, invoices, warranty documents, manuals and other
-            files you upload, along with their file name, type and size.
+            <strong>Receipt images</strong> — photos or files of receipts you capture so purchase
+            details can be suggested. Whether these are kept only on your device or also stored
+            online depends on the app version. [Operator input required: confirm storage.]
           </li>
           <li>
-            <strong>Deadlines and warranties</strong> — return windows, warranty dates, reminder
-            preferences and deadline status.
+            <strong>Deadlines and warranties</strong> — return windows, warranty dates and deadline
+            status.
           </li>
           <li>
-            <strong>Claims and service records</strong> — the claim details and service history you
-            record against a purchase.
+            <strong>Claims</strong> — the claim details you record against a purchase.
           </li>
           <li>
-            <strong>Assistant conversations</strong> — the messages you exchange with the AI
-            assistant, stored against your account.
-          </li>
-          <li>
-            <strong>Notifications</strong> — reminders generated from your deadlines.
+            <strong>Assistant messages</strong> — the text you send to the AI assistant and its
+            replies.
           </li>
         </ul>
         <p>
@@ -69,34 +66,30 @@ function Privacy() {
 
       <DocSection title="How your information is processed">
         <p>
-          ProofPilot runs on Supabase for authentication, database storage and file storage. Your
-          data is held in that infrastructure on our behalf. Privileged operations — AI requests and
-          account deletion — run in server-side functions rather than in your browser or on your
-          phone.
+          ProofPilot uses a hosted backend for authentication and database storage. AI requests run
+          in server-side functions rather than directly from your browser or phone. [Operator/legal
+          input required: list of service providers and hosting region.]
         </p>
       </DocSection>
 
       <DocSection title="AI processing">
         <p>
-          When you use the assistant, the relevant purchase information from your account and your
-          message are sent to our server-side AI function, which calls an AI provider to generate a
-          reply. Your browser never holds AI provider credentials. Assistant output is assistance,
-          not verified fact, and should not be relied on for legal, warranty or financial decisions
-          without checking the underlying documents.
+          When you use AI features — such as suggesting details from a receipt or asking the
+          assistant a question — the relevant content is sent to a server-side function, which calls
+          an AI provider to generate a response. Your device never holds AI provider credentials. AI
+          output can be wrong or incomplete and should be checked before you rely on it.
         </p>
       </DocSection>
 
       <DocSection title="Storage and security">
         <p>
-          Every purchase, document, deadline and claim is tied to the account that created it.
-          Access rules are enforced in the database itself through row-level security, so records
-          can only be read by their owner — or by members of a household you have explicitly shared
-          a purchase with. Uploaded files are kept in private storage and are not publicly readable.
+          Every purchase, deadline and claim is tied to the account that created it. Access rules are
+          enforced in the database itself through row-level security, so records can only be read by
+          their owner.
         </p>
         <p>
           No system is perfectly secure. We do not claim any certification, audit or compliance
-          standard, and we do not describe our encryption as anything beyond what our infrastructure
-          provides.
+          standard.
         </p>
       </DocSection>
 
@@ -110,19 +103,18 @@ function Privacy() {
 
       <DocSection title="Retention and deletion">
         <p>
-          Your records are kept while your account exists. You can delete your account from
-          Settings; that request is handled by a server-side deletion function which removes your
-          account and the data associated with it. Deletion is permanent and cannot be undone.
-          Backups and provider-side logs may persist for a short period on our infrastructure
-          provider&apos;s own schedule, which we do not control.
+          Your records are kept while your account exists. Self-service account deletion is not yet
+          available; to request deletion, email us from the address on your account and we will
+          handle the request. [Operator/legal input required: retention periods and backup
+          handling.]
         </p>
       </DocSection>
 
       <DocSection title="Your choices">
         <p>
-          You can view, edit and delete your purchases, documents, deadlines and claims at any time
-          from the app, and delete your whole account from Settings. If you would like a copy of
-          your information or have a request we have not covered here, email us and we will respond.
+          You can view, edit and delete your purchases, deadlines and claims in the app. If you
+          would like a copy of your information, account deletion, or have a request not covered
+          here, email us.
         </p>
       </DocSection>
 
