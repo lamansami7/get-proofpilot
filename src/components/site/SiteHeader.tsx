@@ -32,10 +32,10 @@ export function SiteHeader() {
         </nav>
 
         <div className="hidden items-center gap-2 lg:flex">
-          <Link to="/support" className="btn-base btn-secondary">
+          <Link to="/auth" className="btn-base btn-secondary">
             Sign in
           </Link>
-          <Link to="/support" className="btn-base btn-primary">
+          <Link to="/auth" className="btn-base btn-primary">
             Protect your purchases
           </Link>
         </div>
@@ -82,10 +82,10 @@ export function SiteHeader() {
               </a>
             ))}
             <div className="flex flex-col gap-2 py-4">
-              <Link to="/support" className="btn-base btn-primary" onClick={() => setOpen(false)}>
+              <Link to="/auth" className="btn-base btn-primary" onClick={() => setOpen(false)}>
                 Protect your purchases
               </Link>
-              <Link to="/support" className="btn-base btn-secondary" onClick={() => setOpen(false)}>
+              <Link to="/auth" className="btn-base btn-secondary" onClick={() => setOpen(false)}>
                 Sign in
               </Link>
             </div>
