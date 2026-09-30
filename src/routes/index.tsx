@@ -172,7 +172,7 @@ function Landing() {
               </div>
             </div>
             <p className="mt-3 text-center text-xs text-hero-foreground/60">
-              Illustration of the ProofPilot dashboard.
+              Illustration with example data — not real users or purchases.
             </p>
           </div>
         </div>
@@ -294,20 +294,19 @@ function Landing() {
             <p className="eyebrow">Privacy &amp; security</p>
             <h2 className="mt-3 text-3xl md:text-4xl">Your records stay yours.</h2>
             <p className="mt-4 max-w-xl text-base leading-relaxed text-ink-secondary">
-              ProofPilot is built on Supabase authentication with row-level security, so the
-              database itself enforces that a record can only be read by the account that owns it —
-              or by household members you explicitly share with.
+              ProofPilot uses account-based authentication with row-level security, so the
+              database itself enforces that a record can only be read by the account that owns it.
             </p>
             <p className="mt-4 text-sm text-muted-foreground">
-              We describe only what the product actually does. No certification claims, no
-              marketing language about encryption we have not implemented.
+              We describe only what the product actually does. No certification claims and no
+              security guarantees.
             </p>
           </div>
           <dl className="grid gap-4 sm:grid-cols-2">
             {[
               {
-                t: "Supabase authentication",
-                d: "One account across web and mobile, with email verification and password reset.",
+                t: "One account",
+                d: "The same account is intended to work across web and the mobile app.",
               },
               {
                 t: "Row Level Security",
@@ -315,19 +314,19 @@ function Landing() {
               },
               {
                 t: "Account ownership",
-                d: "Purchases, documents, deadlines and claims are scoped to your user account.",
+                d: "Purchases, deadlines and claims are scoped to your user account.",
               },
               {
-                t: "Server-side functions",
-                d: "Privileged work, including AI requests and account deletion, runs on the server.",
+                t: "Server-side AI",
+                d: "AI requests run through a server-side function; your device never holds AI provider keys.",
               },
               {
-                t: "Private document storage",
-                d: "Files are stored in a private bucket; nothing is made publicly readable.",
+                t: "No selling of data",
+                d: "Your purchase information is not sold to anyone.",
               },
               {
                 t: "Account deletion",
-                d: "You can delete your account and its data from Settings.",
+                d: "Deletion requests are currently handled through support while the in-app process is verified.",
               },
             ].map((item) => (
               <div key={item.t} className="rounded-2xl border border-border bg-background p-5">

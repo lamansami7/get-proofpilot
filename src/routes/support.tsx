@@ -9,7 +9,7 @@ export const Route = createFileRoute("/support")({
       {
         name: "description",
         content:
-          "Get help with your ProofPilot account, sign-in problems, purchases, documents and account deletion.",
+          "Get help with your ProofPilot account, sign-in problems, purchases, receipts and account deletion requests.",
       },
       { property: "og:title", content: "Support — ProofPilot" },
       {
@@ -41,16 +41,20 @@ const faqs = [
     a: "Merchant, product name, purchase date and price cover most situations. Serial and model numbers, the SKU and your receipt make returns, warranties and claims much easier.",
   },
   {
-    q: "What documents can I store?",
-    a: "Receipts, invoices, warranty documents, manuals and other purchase-related files, up to 20 MB each. Files are kept in private storage tied to your account.",
+    q: "Does ProofPilot read my receipts automatically?",
+    a: "ProofPilot can use AI to suggest purchase details from a receipt. Suggestions can be wrong or incomplete, so always review them before saving. You can also enter details by hand.",
   },
   {
-    q: "Are my documents visible to anyone else?",
-    a: "No. Documents are scoped to your account, and database access rules prevent other accounts from reading them. Household members can only see purchases you have explicitly shared with a household.",
+    q: "Are my records visible to anyone else?",
+    a: "No. Records are scoped to your account, and database access rules prevent other accounts from reading them.",
   },
   {
     q: "How do I delete my account?",
-    a: "Open Settings and choose to delete your account. Deletion is permanent: your purchases, documents, deadlines and claims are removed and cannot be restored.",
+    a: "Self-service account deletion is not yet available. Email us from the address on your account with the subject \"Account deletion request\" and we will confirm your identity and handle the request. Deletion is permanent.",
+  },
+  {
+    q: "Does ProofPilot send reminders or submit claims for me?",
+    a: "Not at this time. ProofPilot helps you see deadlines and prepare claims; you remain responsible for acting in time and for submitting claims to the merchant or manufacturer.",
   },
   {
     q: "Can I trust the AI assistant's answers?",
@@ -74,8 +78,16 @@ function Support() {
           >
             {SUPPORT_EMAIL}
           </a>
-          . Please include the email address on your account and, if it helps, the name of the
-          purchase involved. Never send us your password.
+          . Please include:
+        </p>
+        <ul>
+          <li>the email address on your ProofPilot account</li>
+          <li>whether you use the website, iPhone or Android app, and the app version if known</li>
+          <li>what you were trying to do and what happened instead</li>
+          <li>the purchase involved, and a screenshot if it helps</li>
+        </ul>
+        <p>
+          Never send us your password, verification codes or payment card details.
         </p>
       </DocSection>
 
