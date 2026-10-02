@@ -81,14 +81,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         name: "description",
         content:
-          "ProofPilot keeps purchase records organized, tracks return and warranty deadlines, stores your receipts and documents, and helps you prepare claims.",
+          "ProofPilot helps you capture receipts, keep purchase records organized, track return and warranty deadlines, and prepare claims.",
       },
       { name: "author", content: "ProofPilot" },
       { property: "og:title", content: "ProofPilot — Protect your purchases after checkout" },
       {
         property: "og:description",
         content:
-          "Keep purchase records organized, track return and warranty deadlines, store documents and get help preparing claims.",
+          "Capture receipts, organize purchase records, track return and warranty deadlines and get help preparing claims.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
