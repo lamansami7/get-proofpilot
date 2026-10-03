@@ -5,7 +5,8 @@ import { Logo } from "./Logo";
 const sections = [
   { label: "How it works", href: "/#how-it-works" },
   { label: "Features", href: "/#features" },
-  { label: "Privacy & security", href: "/#security" },
+  { label: "Privacy", href: "/privacy" },
+  { label: "Terms", href: "/terms" },
   { label: "Support", href: "/support" },
 ];
 
@@ -31,13 +32,10 @@ export function SiteHeader() {
           ))}
         </nav>
 
-        <div className="hidden items-center gap-2 lg:flex">
-          <Link to="/auth" className="btn-base btn-secondary">
-            Sign in
-          </Link>
-          <Link to="/auth" className="btn-base btn-primary">
-            Protect your purchases
-          </Link>
+        <div className="hidden lg:flex">
+          <a href="/#download" className="btn-base btn-primary">
+            Get ProofPilot
+          </a>
         </div>
 
         <button
@@ -81,13 +79,14 @@ export function SiteHeader() {
                 {item.label}
               </a>
             ))}
-            <div className="flex flex-col gap-2 py-4">
-              <Link to="/auth" className="btn-base btn-primary" onClick={() => setOpen(false)}>
-                Protect your purchases
-              </Link>
-              <Link to="/auth" className="btn-base btn-secondary" onClick={() => setOpen(false)}>
-                Sign in
-              </Link>
+            <div className="py-4">
+              <a
+                href="/#download"
+                className="btn-base btn-primary w-full"
+                onClick={() => setOpen(false)}
+              >
+                Get ProofPilot
+              </a>
             </div>
           </nav>
         </div>
