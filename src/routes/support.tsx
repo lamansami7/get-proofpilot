@@ -9,7 +9,7 @@ export const Route = createFileRoute("/support")({
       {
         name: "description",
         content:
-          "Get help with your ProofPilot account, sign-in problems, purchases, receipts and account deletion requests.",
+          "Get help with the ProofPilot app: sign-in problems, purchases, receipts and account deletion requests.",
       },
       { property: "og:title", content: "Support — ProofPilot" },
       {
@@ -26,8 +26,8 @@ export const Route = createFileRoute("/support")({
 
 const faqs = [
   {
-    q: "Do I need a separate account for the website and the app?",
-    a: "No. ProofPilot uses one account. Sign up on either the website or the mobile app and the same email and password work in both.",
+    q: "Where do I get ProofPilot?",
+    a: "ProofPilot is a mobile app launching first on Android through Google Play. This website is informational only — there is nothing to sign in to here.",
   },
   {
     q: "I signed up but never received the verification email.",
@@ -35,7 +35,7 @@ const faqs = [
   },
   {
     q: "I forgot my password.",
-    a: "Use the forgot-password link on the sign-in screen. You will receive a reset link by email; the link expires, so request a new one if it no longer works.",
+    a: "Use the forgot-password link on the sign-in screen in the app. You will receive a reset link by email; the link expires, so request a new one if it no longer works.",
   },
   {
     q: "Which purchase details should I record?",
@@ -83,7 +83,7 @@ function Support() {
         </p>
         <ul>
           <li>the email address on your ProofPilot account</li>
-          <li>whether you use the website, iPhone or Android app, and the app version if known</li>
+          <li>your phone model and the app version, if known</li>
           <li>what you were trying to do and what happened instead</li>
           <li>the purchase involved, and a screenshot if it helps</li>
         </ul>

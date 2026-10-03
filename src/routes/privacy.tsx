@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { DocPage, DocSection } from "@/components/site/SiteLayout";
-import { SUPPORT_EMAIL } from "@/components/site/SiteFooter";
+import { SUPPORT_EMAIL } from "@/lib/links";
 
 export const Route = createFileRoute("/privacy")({
   head: () => ({
@@ -9,13 +9,13 @@ export const Route = createFileRoute("/privacy")({
       {
         name: "description",
         content:
-          "How ProofPilot handles your account information, purchase records, documents, deadlines, claims and AI requests.",
+          "How the ProofPilot website and the ProofPilot mobile app handle information, explained in plain language.",
       },
       { property: "og:title", content: "Privacy Policy — ProofPilot" },
       {
         property: "og:description",
         content:
-          "What ProofPilot collects, how it is stored and how to delete your account and data.",
+          "What the ProofPilot website and mobile app collect, and what you can do about it.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -24,124 +24,117 @@ export const Route = createFileRoute("/privacy")({
   component: Privacy,
 });
 
+const linkClass =
+  "font-bold text-accent-foreground underline decoration-primary decoration-2 underline-offset-4";
+
 function Privacy() {
   return (
     <DocPage
       eyebrow="Legal"
       title="Privacy Policy"
-      intro="This policy describes what ProofPilot stores, where it is stored and what you can do about it. It describes the product as built. Where a detail is not yet established, we say so rather than inventing one."
-      updated="This document has not been reviewed by a lawyer. It is a plain description of the product's data handling."
+      intro="This policy covers two things: this public website, and the ProofPilot mobile app. They are separate. The website only explains ProofPilot; the app is where your purchase information lives."
+      updated="Plain-language description of current practices. This policy has not yet been reviewed by a lawyer."
     >
-      <DocSection title="Information we collect">
+      <DocSection title="The ProofPilot website">
         <p>
-          ProofPilot stores only what you enter or upload, plus what is needed to run an account:
+          This website is informational. It has no sign-in, no forms that store your details, and it
+          does not collect or store purchase records, receipts or any other app data.
         </p>
         <ul>
           <li>
-            <strong>Account information</strong> — your email address and authentication details,
-            held by our authentication provider, plus an optional display name.
+            Like most websites, the hosting provider may process standard technical information
+            (such as IP address, browser type and the pages requested) to deliver and protect the
+            site.
+          </li>
+          <li>The website does not use advertising trackers.</li>
+          <li>
+            If you email us, we receive your email address and whatever you choose to include in
+            your message, and use it only to reply.
+          </li>
+        </ul>
+      </DocSection>
+
+      <DocSection title="The ProofPilot mobile app">
+        <p>
+          When you use the app, it stores what you enter or capture, plus what it needs to run your
+          account:
+        </p>
+        <ul>
+          <li>
+            <strong>Account information</strong> — your email address and sign-in details.
           </li>
           <li>
-            <strong>Purchase information</strong> — merchant, product name, category, purchase date,
-            price and currency, serial number, model number, SKU and your notes.
+            <strong>Purchase information</strong> — merchant, product, purchase date, price, serial
+            and model numbers, SKU and your notes.
           </li>
           <li>
             <strong>Receipt images</strong> — photos or files of receipts you capture so purchase
-            details can be suggested. Whether these are kept only on your device or also stored
-            online depends on the app version. [Operator input required: confirm storage.]
+            details can be suggested.
           </li>
           <li>
-            <strong>Deadlines and warranties</strong> — return windows, warranty dates and deadline
-            status.
+            <strong>Deadlines and claims</strong> — return windows, warranty dates and claim details
+            you record.
           </li>
           <li>
-            <strong>Claims</strong> — the claim details you record against a purchase.
-          </li>
-          <li>
-            <strong>Assistant messages</strong> — the text you send to the AI assistant and its
-            replies.
+            <strong>Assistant messages</strong> — what you send to the AI assistant and its replies.
           </li>
         </ul>
         <p>
-          ProofPilot does not ask for payment card numbers, government identifiers or contact lists.
+          The app does not ask for payment card numbers, government identifiers or contact lists.
         </p>
       </DocSection>
 
-      <DocSection title="How your information is processed">
-        <p>
-          ProofPilot uses a hosted backend for authentication and database storage. AI requests run
-          in server-side functions rather than directly from your browser or phone. [Operator/legal
-          input required: list of service providers and hosting region.]
-        </p>
-      </DocSection>
-
-      <DocSection title="AI processing">
+      <DocSection title="AI processing in the app">
         <p>
           When you use AI features — such as suggesting details from a receipt or asking the
           assistant a question — the relevant content is sent to a server-side function, which calls
-          an AI provider to generate a response. Your device never holds AI provider credentials. AI
-          output can be wrong or incomplete and should be checked before you rely on it.
-        </p>
-      </DocSection>
-
-      <DocSection title="Storage and security">
-        <p>
-          Every purchase, deadline and claim is tied to the account that created it. Access rules
-          are enforced in the database itself through row-level security, so records can only be
-          read by their owner.
-        </p>
-        <p>
-          No system is perfectly secure. We do not claim any certification, audit or compliance
-          standard.
+          an AI provider to generate a response. AI output can be wrong or incomplete; check it
+          before relying on it.
         </p>
       </DocSection>
 
       <DocSection title="Sharing">
         <p>
-          We do not sell your information. It is shared only with the infrastructure and AI
-          providers needed to operate the features described above, and where we are legally
-          required to do so.
+          We do not sell your information. It is shared only with the service providers needed to
+          run the website and the app (such as hosting, database and AI providers), and where we are
+          legally required to do so.
         </p>
       </DocSection>
 
-      <DocSection title="Retention and deletion">
+      <DocSection title="Security">
         <p>
-          Your records are kept while your account exists. Self-service account deletion is not yet
-          available; to request deletion, email us from the address on your account and we will
-          handle the request. [Operator/legal input required: retention periods and backup
-          handling.]
+          App records are tied to the account that created them, with access rules designed so that
+          only the owner can read them. No system is perfectly secure, and we do not claim any
+          certification or compliance standard.
         </p>
       </DocSection>
 
       <DocSection title="Your choices">
         <p>
-          You can view, edit and delete your purchases, deadlines and claims in the app. If you
-          would like a copy of your information, account deletion, or have a request not covered
-          here, email us.
+          You can view, edit and delete your purchases, deadlines and claims in the app. To request
+          a copy of your information or deletion of your account and its data, email us from the
+          address on your account.
         </p>
       </DocSection>
 
-      <DocSection title="Children's privacy">
+      <DocSection title="Children">
         <p>
           ProofPilot is not intended for children. Please do not create an account if you are under
           the age required for consent where you live.
         </p>
       </DocSection>
 
-      <DocSection title="Changes to this policy">
+      <DocSection title="Changes">
         <p>
-          If the product changes in a way that affects this policy, we will update this page. We
-          will not describe practices here that the product does not actually follow.
+          If our practices change, we will update this page. We will not describe practices here
+          that the product does not actually follow.
         </p>
       </DocSection>
 
       <DocSection title="Contact">
         <p>
           Questions about privacy?{" "}
-          <a
-            href={`mailto:${SUPPORT_EMAIL}`}
-            className="font-bold text-accent-foreground underline decoration-primary decoration-2 underline-offset-4"
-          >
+          <a href={`mailto:${SUPPORT_EMAIL}`} className={linkClass}>
             {SUPPORT_EMAIL}
           </a>
         </p>

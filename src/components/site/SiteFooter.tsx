@@ -1,7 +1,8 @@
 import { Link } from "@tanstack/react-router";
+import { SUPPORT_EMAIL } from "@/lib/links";
 import { Logo } from "./Logo";
 
-export const SUPPORT_EMAIL = "support.proofpilot@gmail.com";
+export { SUPPORT_EMAIL };
 
 export function SiteFooter() {
   return (
@@ -10,9 +11,15 @@ export function SiteFooter() {
         <div className="max-w-sm">
           <Logo />
           <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
-            ProofPilot keeps your purchase records, documents and deadlines in one place, on the web
-            and in the mobile app, with one account for both.
+            ProofPilot is a mobile app that helps you keep track of purchases, receipts, return
+            windows and warranties. Launching first on Android.
           </p>
+          <a
+            href="/#download"
+            className="mt-5 inline-flex text-sm font-bold text-accent-foreground underline decoration-primary decoration-2 underline-offset-4"
+          >
+            Get ProofPilot
+          </a>
         </div>
 
         <nav aria-label="Product">
@@ -29,8 +36,8 @@ export function SiteFooter() {
               </a>
             </li>
             <li>
-              <a href="/#security" className="hover:text-foreground">
-                Privacy &amp; security
+              <a href="/#download" className="hover:text-foreground">
+                Download
               </a>
             </li>
           </ul>
@@ -55,7 +62,7 @@ export function SiteFooter() {
               </Link>
             </li>
             <li>
-              <a href={`mailto:${SUPPORT_EMAIL}`} className="hover:text-foreground">
+              <a href={`mailto:${SUPPORT_EMAIL}`} className="break-all hover:text-foreground">
                 {SUPPORT_EMAIL}
               </a>
             </li>
