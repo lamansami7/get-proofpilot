@@ -77,9 +77,6 @@ const features = [
   },
 ];
 
-export default function LandingPage() {
-  return <Landing />;
-}
 
 function Landing() {
   return (
@@ -102,15 +99,13 @@ function Landing() {
               about your own purchases.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <Link to="/auth" className="btn-base btn-primary">
-                Protect your purchases
-              </Link>
-              <Link to="/auth" className="btn-base btn-onhero">
-                Sign in
-              </Link>
+              <GooglePlayButton />
+              <a href="#how-it-works" className="btn-base btn-onhero">
+                See how it works
+              </a>
             </div>
             <p className="mt-6 text-sm text-hero-foreground/70">
-              One account for web and the ProofPilot mobile app.
+              A mobile app for Android, launching first on Google Play.
             </p>
           </div>
 
@@ -291,8 +286,8 @@ function Landing() {
             <p className="eyebrow">Privacy &amp; security</p>
             <h2 className="mt-3 text-3xl md:text-4xl">Your records stay yours.</h2>
             <p className="mt-4 max-w-xl text-base leading-relaxed text-ink-secondary">
-              ProofPilot uses account-based authentication with row-level security, so the database
-              itself enforces that a record can only be read by the account that owns it.
+              In the ProofPilot app, your purchase records are tied to your own account, and access
+              rules are designed so that only you can read them.
             </p>
             <p className="mt-4 text-sm text-muted-foreground">
               We describe only what the product actually does. No certification claims and no
@@ -302,28 +297,20 @@ function Landing() {
           <dl className="grid gap-4 sm:grid-cols-2">
             {[
               {
-                t: "One account",
-                d: "The same account is intended to work across web and the mobile app.",
-              },
-              {
-                t: "Row Level Security",
-                d: "Access rules live in the database, applied to every read and write.",
-              },
-              {
-                t: "Account ownership",
-                d: "Purchases, deadlines and claims are scoped to your user account.",
+                t: "Your own account",
+                d: "Purchases, deadlines and claims in the app belong to your account.",
               },
               {
                 t: "Server-side AI",
-                d: "AI requests run through a server-side function; your device never holds AI provider keys.",
+                d: "AI requests run through a server-side function; your phone never holds AI provider keys.",
               },
               {
                 t: "No selling of data",
                 d: "Your purchase information is not sold to anyone.",
               },
               {
-                t: "Account deletion",
-                d: "Deletion requests are currently handled through support while the in-app process is verified.",
+                t: "This website stays simple",
+                d: "This site has no sign-in and does not store your purchase data.",
               },
             ].map((item) => (
               <div key={item.t} className="rounded-2xl border border-border bg-background p-5">
@@ -335,20 +322,30 @@ function Landing() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-16 md:py-24">
-        <div className="container-narrow text-center">
-          <h2 className="text-3xl md:text-4xl">Start protecting your next purchase.</h2>
-          <p className="mx-auto mt-4 max-w-xl text-base leading-relaxed text-ink-secondary">
-            Create one ProofPilot account and use it on the web and in the mobile app.
-          </p>
-          <div className="mt-8 flex flex-wrap justify-center gap-3">
-            <Link to="/auth" className="btn-base btn-primary">
-              Protect your purchases
-            </Link>
-            <Link to="/support" className="btn-base btn-secondary">
-              Talk to support
-            </Link>
+      {/* DOWNLOAD */}
+      <section id="download" className="scroll-mt-24 py-16 md:py-24">
+        <div className="container-page">
+          <div className="relative overflow-hidden rounded-3xl bg-hero px-6 py-12 text-center text-hero-foreground md:px-12 md:py-16">
+            <div
+              aria-hidden="true"
+              className="pointer-events-none absolute -bottom-40 left-1/2 h-[28rem] w-[28rem] -translate-x-1/2 rounded-full bg-hero-muted/60 blur-3xl"
+            />
+            <div className="relative">
+              <p className="eyebrow text-primary">Get ProofPilot</p>
+              <h2 className="mx-auto mt-3 max-w-2xl text-3xl text-hero-foreground md:text-4xl">
+                Start protecting your next purchase.
+              </h2>
+              <p className="mx-auto mt-4 max-w-xl text-base leading-relaxed text-hero-foreground/80">
+                ProofPilot is launching first on Android through Google Play. The download link
+                will appear here as soon as the app is published.
+              </p>
+              <div className="mt-8 flex flex-wrap justify-center gap-3">
+                <GooglePlayButton />
+                <Link to="/support" className="btn-base btn-onhero">
+                  Contact support
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </section>
