@@ -9,7 +9,7 @@ export const Route = createFileRoute("/support")({
       {
         name: "description",
         content:
-          "Get help with your ProofPilot account, sign-in problems, purchases, receipts and account deletion requests.",
+          "Get help with the ProofPilot app: sign-in problems, purchases, receipts and account deletion requests.",
       },
       { property: "og:title", content: "Support — ProofPilot" },
       {
@@ -26,8 +26,8 @@ export const Route = createFileRoute("/support")({
 
 const faqs = [
   {
-    q: "Do I need a separate account for the website and the app?",
-    a: "No. ProofPilot uses one account. Sign up on either the website or the mobile app and the same email and password work in both.",
+    q: "Where do I get ProofPilot?",
+    a: "ProofPilot is a mobile app launching first on Android through Google Play. This website is informational only — there is nothing to sign in to here.",
   },
   {
     q: "I signed up but never received the verification email.",
