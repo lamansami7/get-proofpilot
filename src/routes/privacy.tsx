@@ -14,7 +14,8 @@ export const Route = createFileRoute("/privacy")({
       { property: "og:title", content: "Privacy Policy — ProofPilot" },
       {
         property: "og:description",
-        content: "What the ProofPilot website and mobile app collect, and what you can do about it.",
+        content:
+          "What the ProofPilot website and mobile app collect, and what you can do about it.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -36,8 +37,8 @@ function Privacy() {
     >
       <DocSection title="The ProofPilot website">
         <p>
-          This website is informational. It has no sign-in, no forms that store your details, and
-          it does not collect or store purchase records, receipts or any other app data.
+          This website is informational. It has no sign-in, no forms that store your details, and it
+          does not collect or store purchase records, receipts or any other app data.
         </p>
         <ul>
           <li>
@@ -54,14 +55,17 @@ function Privacy() {
       </DocSection>
 
       <DocSection title="The ProofPilot mobile app">
-        <p>When you use the app, it stores what you enter or capture, plus what it needs to run your account:</p>
+        <p>
+          When you use the app, it stores what you enter or capture, plus what it needs to run your
+          account:
+        </p>
         <ul>
           <li>
             <strong>Account information</strong> — your email address and sign-in details.
           </li>
           <li>
-            <strong>Purchase information</strong> — merchant, product, purchase date, price,
-            serial and model numbers, SKU and your notes.
+            <strong>Purchase information</strong> — merchant, product, purchase date, price, serial
+            and model numbers, SKU and your notes.
           </li>
           <li>
             <strong>Receipt images</strong> — photos or files of receipts you capture so purchase
@@ -75,23 +79,25 @@ function Privacy() {
             <strong>Assistant messages</strong> — what you send to the AI assistant and its replies.
           </li>
         </ul>
-        <p>The app does not ask for payment card numbers, government identifiers or contact lists.</p>
+        <p>
+          The app does not ask for payment card numbers, government identifiers or contact lists.
+        </p>
       </DocSection>
 
       <DocSection title="AI processing in the app">
         <p>
           When you use AI features — such as suggesting details from a receipt or asking the
-          assistant a question — the relevant content is sent to a server-side function, which
-          calls an AI provider to generate a response. AI output can be wrong or incomplete; check
-          it before relying on it.
+          assistant a question — the relevant content is sent to a server-side function, which calls
+          an AI provider to generate a response. AI output can be wrong or incomplete; check it
+          before relying on it.
         </p>
       </DocSection>
 
       <DocSection title="Sharing">
         <p>
           We do not sell your information. It is shared only with the service providers needed to
-          run the website and the app (such as hosting, database and AI providers), and where we
-          are legally required to do so.
+          run the website and the app (such as hosting, database and AI providers), and where we are
+          legally required to do so.
         </p>
       </DocSection>
 

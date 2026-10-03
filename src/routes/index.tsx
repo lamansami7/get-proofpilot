@@ -78,7 +78,6 @@ const features = [
   },
 ];
 
-
 function Landing() {
   return (
     <SiteLayout>
@@ -337,8 +336,8 @@ function Landing() {
                 Start protecting your next purchase.
               </h2>
               <p className="mx-auto mt-4 max-w-xl text-base leading-relaxed text-hero-foreground/80">
-                ProofPilot is launching first on Android through Google Play. The download link
-                will appear here as soon as the app is published.
+                ProofPilot is launching first on Android through Google Play. The download link will
+                appear here as soon as the app is published.
               </p>
               <div className="mt-8 flex flex-wrap justify-center gap-3">
                 <GooglePlayButton />

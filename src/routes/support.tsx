@@ -35,7 +35,7 @@ const faqs = [
   },
   {
     q: "I forgot my password.",
-    a: "Use the forgot-password link on the sign-in screen. You will receive a reset link by email; the link expires, so request a new one if it no longer works.",
+    a: "Use the forgot-password link on the sign-in screen in the app. You will receive a reset link by email; the link expires, so request a new one if it no longer works.",
   },
   {
     q: "Which purchase details should I record?",
@@ -83,7 +83,7 @@ function Support() {
         </p>
         <ul>
           <li>the email address on your ProofPilot account</li>
-          <li>whether you use the website, iPhone or Android app, and the app version if known</li>
+          <li>your phone model and the app version, if known</li>
           <li>what you were trying to do and what happened instead</li>
           <li>the purchase involved, and a screenshot if it helps</li>
         </ul>
