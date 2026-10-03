@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/site/SiteLayout";
+import { GooglePlayButton } from "@/components/site/GooglePlayButton";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -262,7 +263,7 @@ function Landing() {
               The assistant works from your own purchase records — dates, merchants, documents and
               deadlines — to help you understand a return window, get a claim ready or find the
               details of an older purchase. Requests are handled by ProofPilot&apos;s server-side
-              function, never by your browser talking to an AI provider directly.
+              function, never by your phone talking to an AI provider directly.
             </p>
             <ul className="mt-6 grid gap-3 text-sm text-hero-foreground/80 sm:grid-cols-3">
               <li className="rounded-xl border border-white/15 bg-white/10 p-4">
